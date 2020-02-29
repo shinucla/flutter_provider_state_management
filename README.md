@@ -35,16 +35,16 @@ III. Use case 1: Login
     - methods: {login, logout, register, update}
     
  2) Instantiate UserProfileChangeNotifier at root:
-    '''
+    ```
     runApp(ChangeNotifierProvider(
               create: (context) => UserProfileChangeNotifier(),
               child: MaterialApp(
                 home: MainPage(),
               )
           ));
-    '''
+    ```
  3) Use Consumer in MainPage class default build function
-    '''
+    ```
     @override
     Widget build(BuildContext context) {
       return Consumer<UserProfileChangeNotifier>(
@@ -58,7 +58,7 @@ III. Use case 1: Login
 	}
       );
     }
-    '''
+    ```
     Use Consumer in Login class
      - login button -> onPress -> Provider.of<UserProfileChangeNotifier>>(context).login();
      
