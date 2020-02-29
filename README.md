@@ -4,10 +4,11 @@ Flutter:
 I. Requirement:
  1) Adding provider package into "pubspec.yaml" as dependency; run "flutter pub get" to install the package
  2) imports for the packages:
-    - import 'package:flutter/foundation.dart';
-    - import 'package:flutter/material.dart';
-    - import 'package:provider/provider.dart';
- 
+    ```
+    import 'package:flutter/foundation.dart';
+    import 'package:flutter/material.dart';
+    import 'package:provider/provider.dart';
+    ```
 I. Components:
  1) ChangeNotifier  ---------------- state model
  2) ChangeNotifierProvider --------- container of state model via context
@@ -49,13 +50,13 @@ III. Use case 1: Login
     Widget build(BuildContext context) {
       return Consumer<UserProfileChangeNotifier>(
         builder: (context, user, child) {
-	  switch (user.authorizationStateEnum) {
-	    case NONE: --------------> return Login widget
-	    case LOG_IN: ------------> return Home widget
-	    case FAILED: ------------> return Login Widget
-	    case LOG_OUT: -----------> return Login Widget
+          switch (user.authorizationStateEnum) {
+            case NONE: --------------> return Login widget
+            case LOG_IN: ------------> return Home widget
+            case FAILED: ------------> return Login Widget
+            case LOG_OUT: -----------> return Login Widget
           }
-	}
+        }
       );
     }
     ```
