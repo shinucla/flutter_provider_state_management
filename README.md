@@ -4,7 +4,7 @@ Flutter:
 I. Requirement:
  1) Adding provider package into "pubspec.yaml" as dependency; run "flutter pub get" to install the package
  2) imports for the packages:
-    ```
+    ```dart
     import 'package:flutter/foundation.dart';
     import 'package:flutter/material.dart';
     import 'package:provider/provider.dart';
