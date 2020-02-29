@@ -36,7 +36,7 @@ III. Use case 1: Login
     - methods: {login, logout, register, update}
     
  2) Instantiate UserProfileChangeNotifier at root:
-    ```
+    ```flutter
     runApp(ChangeNotifierProvider(
               create: (context) => UserProfileChangeNotifier(),
               child: MaterialApp(
@@ -45,7 +45,7 @@ III. Use case 1: Login
           ));
     ```
  3) Use Consumer in MainPage class default build function
-    ```
+    ```flutter
     @override
     Widget build(BuildContext context) {
       return Consumer<UserProfileChangeNotifier>(
