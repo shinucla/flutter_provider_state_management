@@ -4,9 +4,9 @@ Flutter:
 I. Requirement:
  1) Adding provider package into "pubspec.yaml" as dependency; run "flutter pub get" to install the package
  2) imports for the packages:
-    import 'package:flutter/foundation.dart';
-    import 'package:flutter/material.dart';
-    import 'package:provider/provider.dart';
+    - import 'package:flutter/foundation.dart';
+    - import 'package:flutter/material.dart';
+    - import 'package:provider/provider.dart';
  
 I. Components:
  1) ChangeNotifier  ---------------- state model
