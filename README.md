@@ -50,7 +50,7 @@ III. Use case 1: Login
     Widget build(BuildContext context) {
       return Consumer<UserProfileChangeNotifier>(
         builder: (context, user, child) {
-          switch (user.authorizationStateEnum) {
+          switch (user.authenticationStateEnum) {
             case NONE: --------------> return Login widget
             case LOG_IN: ------------> return Home widget
             case FAILED: ------------> return Login Widget
