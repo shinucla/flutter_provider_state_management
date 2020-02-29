@@ -24,8 +24,8 @@ II. How it works
     At any event triffering functions, just use Provider.of to access state model functions
 
 III. Use case 1: Login
-     Authentication is the process of verifying oneself;
-     Authorization is the process of verifying what you have access to;
+     - Authentication is the process of verifying oneself;
+     - Authorization is the process of verifying what you have access to;
 
      Authentication states: { NONE, LOG_IN, FAILED, LOG_OUT }
      Authorization states: { ADMIN, BOSS, WORKER_B }
@@ -35,14 +35,16 @@ III. Use case 1: Login
     - methods: {login, logout, register, update}
     
  2) Instantiate UserProfileChangeNotifier at root:
+    '''
     runApp(ChangeNotifierProvider(
-             create: (context) => UserProfileChangeNotifier(),
-	     child: MaterialApp(
-	       home: MainPage(),
-	     )
-	 ));
-
+              create: (context) => UserProfileChangeNotifier(),
+              child: MaterialApp(
+                home: MainPage(),
+              )
+          ));
+    '''
  3) Use Consumer in MainPage class default build function
+    '''
     @override
     Widget build(BuildContext context) {
       return Consumer<UserProfileChangeNotifier>(
@@ -56,7 +58,7 @@ III. Use case 1: Login
 	}
       );
     }
-    
+    '''
     Use Consumer in Login class
      - login button -> onPress -> Provider.of<UserProfileChangeNotifier>>(context).login();
      
